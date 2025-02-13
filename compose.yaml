@@ -1,0 +1,9 @@
+﻿name: "leviatrace"
+
+services:
+  
+  leviatrace.api:
+    image: leviatrace.api
+    build:
+      context: .
+      dockerfile: Leviatrace.Api/Dockerfile
