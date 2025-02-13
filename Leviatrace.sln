@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leviatrace.Api", "Leviatrace.Api\Leviatrace.Api.csproj", "{48FC2A02-5825-4783-9E31-D54171FB85C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leviathan.Api", "Leviathan.Api\Leviathan.Api.csproj", "{48FC2A02-5825-4783-9E31-D54171FB85C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{C9288ACC-5766-4244-A05E-8481139D56A5}"
 	ProjectSection(SolutionItems) = preProject

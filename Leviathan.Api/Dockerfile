@@ -3,11 +3,11 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Build.props", "./"]
 COPY ["Directory.Packages.props", "./"]
-COPY ["Leviatrace.Api/Leviatrace.Api.csproj", "Leviatrace.Api/"]
-RUN dotnet restore "Leviatrace.Api/Leviatrace.Api.csproj"
+COPY ["Leviathan.Api/Leviathan.Api.csproj", "Leviathan.Api/"]
+RUN dotnet restore "Leviathan.Api/Leviathan.Api.csproj"
 COPY . .
-WORKDIR "/src/Leviatrace.Api"
-RUN dotnet publish "Leviatrace.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+WORKDIR "/src/Leviathan.Api"
+RUN dotnet publish "Leviathan.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Install .NET Auto Instrumentation
 ARG OTEL_VERSION=1.10.0
@@ -22,4 +22,4 @@ COPY --from=build /otel-dotnet-auto ./otel-dotnet-auto
 WORKDIR /app
 EXPOSE 8080
 COPY --from=build /app/publish .
-ENTRYPOINT ["/bin/bash", "-c", "source /otel-dotnet-auto/instrument.sh && dotnet Leviatrace.Api.dll"]
+ENTRYPOINT ["/bin/bash", "-c", "source /otel-dotnet-auto/instrument.sh && dotnet Leviathan.Api.dll"]
