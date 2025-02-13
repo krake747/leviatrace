@@ -1,3 +1,7 @@
+using OpenTelemetry.Logs;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using Serilog;
 using ILogger = Serilog.ILogger;
 
@@ -11,7 +15,29 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog(Log.Logger);
 
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(resource => resource.AddService("Leviatrace.Api"))
+    .WithTracing(static tracing =>
+        tracing
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation()
+            .AddOtlpExporter()
+    )
+    .WithMetrics(static metrics =>
+        metrics
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation()
+            .AddOtlpExporter()
+    )
+    .WithLogging(static logging =>
+        logging
+            .AddConsoleExporter()
+            .AddOtlpExporter()
+    );
+
 var app = builder.Build();
+
+app.MapGet("/", () => Results.Ok("Leviatrace.Api"));
 
 app.MapGet("/search-leviathan", (ILogger logger) =>
 {
