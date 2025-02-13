@@ -14,7 +14,7 @@ Navigate to the root directory which contains the `compose.yaml` file and run:
 docker compose up -d
 ```
 
-Use the `leviatrace.http` file to send requests.
+Use the `leviatrace.http` file and select the `docker` environment to send requests.
 
 ## Leviathan API
 
