@@ -19,6 +19,14 @@ services:
       - "7000:8080"
     networks:
       - levianetwork
+      -
+  nautilus.app:
+    image: nautilus.app
+    build:
+      context: .
+      dockerfile: Nautilus.App/Dockerfile
+    networks:
+      - levianetwork
 
   jaeger:
     image: jaegertracing/all-in-one:latest
