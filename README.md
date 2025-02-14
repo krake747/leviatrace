@@ -1,4 +1,4 @@
-# Leviatrace 🐋
+# Leviatrace 🐋🔎
 
 Leviatrace is a hands-on observability playground using OpenTelemetry, the LGTM stack (Loki, Grafana, Tempo), and .NET
 services.
