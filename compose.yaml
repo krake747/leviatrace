@@ -37,3 +37,9 @@ services:
       - "16686:16686"
     networks:
       - levianetwork
+
+  kraken.api:
+    image: kraken.api
+    build:
+      context: .
+      dockerfile: Kraken.Api/Dockerfile

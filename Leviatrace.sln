@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{C9288ACC-5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nautilus.App", "Nautilus.App\Nautilus.App.csproj", "{B651C07E-C842-4E66-8D41-52821E240946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kraken.Api", "Kraken.Api\Kraken.Api.csproj", "{63218B5F-FCA1-4C65-8942-1F5A26D13188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,9 @@ Global
 		{B651C07E-C842-4E66-8D41-52821E240946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B651C07E-C842-4E66-8D41-52821E240946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B651C07E-C842-4E66-8D41-52821E240946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63218B5F-FCA1-4C65-8942-1F5A26D13188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63218B5F-FCA1-4C65-8942-1F5A26D13188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63218B5F-FCA1-4C65-8942-1F5A26D13188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63218B5F-FCA1-4C65-8942-1F5A26D13188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
